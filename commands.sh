@@ -716,10 +716,10 @@ for (( i=8; i <= $max; i+=4 ))
 do
 	for((j=3; j <= 8; j+=1 ))
 	do
-		touch "FragmentsFilterWeekLast${array_name[$i]}Question${j}.java"
-    		echo "${array_code[$i]} ${array_code[$j]}">"FragmentsFilterWeekLast${array_name[$i]}Question${j}.java"
+		touch "FragmentFilterWeekLast${array_name[$i]}Question${j}.java"
+    		echo "${array_code[$i]} ${array_code[$j]}">"FragmentFilterWeekLast${array_name[$i]}Question${j}.java"
 		git add .
-		git commit --date=$j/$i/2017 -m "FragmentsFilterWeekLast${array_name[$i]}Question${j}.java"
+		git commit --date=$j/$i/2017 -m "FragmentFilterWeekLast${array_name[$i]}Question${j}.java"
 	done
 done
 git push --all
