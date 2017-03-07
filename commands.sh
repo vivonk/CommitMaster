@@ -714,12 +714,12 @@ array_name[13]="Stack"
 max=24
 for (( i=8; i <= $max; i+=2 ))
 do
-	for((j=3; j <= 8; j+=2 ))
+	for((j=3; j <= 8; j+=1 ))
 	do
-		touch "ActivitiesFilterWeekLast${array_name[$i]}Question${j}.java"
-    		echo "${array_code[$i]} ${array_code[$j]}">"ActivitiesFilterWeekLast${array_name[$i]}Question${j}.java"
+		touch "FragmentsFilterWeekLast${array_name[$i]}Question${j}.java"
+    		echo "${array_code[$i]} ${array_code[$j]}">"FragmentsFilterWeekLast${array_name[$i]}Question${j}.java"
 		git add .
-		git commit --date=$j/$i/2017 -m "ActivitiesFilterWeekLast${array_name[$i]}Question${j}.java"
+		git commit --date=$j/$i/2017 -m "FragmentsFilterWeekLast${array_name[$i]}Question${j}.java"
 	done
 done
 git push --all
