@@ -720,10 +720,9 @@ do
     		echo "${array_code[$i]} ${array_code[$j]}">"ActivitiesFilterWeek1${array_name[$i]}Question${j}.java"
 		git add .
 		git commit --date=$j/$i/2017 -m "ActivitiesFilterWeek1${array_name[$i]}Question${j}.java"
-		git push 
 	done
 done
-
+git push --all
 
 
 
