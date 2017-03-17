@@ -711,15 +711,15 @@ array_name[11]="PointerArray"
 array_name[12]="StickArray"
 array_name[13]="Stack"
 
-max=24
-for (( i=8; i <= $max; i+=2 ))
+max=30
+for (( i=18; i <= $max; i+=2 ))
 do
-	for((j=3; j <= 8; j+=3 ))
+	for((j=3; j <= 8; j+=2 ))
 	do
-		touch "FragmentList${array_name[$i]}Question${j}.java"
-    		echo "${array_code[$i]} ${array_code[$j]}">"FragmentList${array_name[$i]}Question${j}.java"
+		touch "FragmentListAdapter${array_name[$i]}Question${j}.java"
+    		echo "${array_code[$i]} ${array_code[$j]}">"FragmentListAdapter${array_name[$i]}Question${j}.java"
 		git add .
-		git commit --date=$j/$i/2017 -m "FragmentList${array_name[$i]}Question${j}.java"
+		git commit --date=$j/$i/2017 -m "FragmentListAdapter${array_name[$i]}Question${j}.java"
 	done
 done
 git push --all
