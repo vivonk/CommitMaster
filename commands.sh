@@ -712,14 +712,14 @@ array_name[12]="StickArray"
 array_name[13]="Stack"
 
 max=24
-for (( i=3; i <= $max; i*=3 ))
+for (( i=3; i <= $max; i*=2 ))
 do
-	for((j=3; j <= 8; j++ ))
+	for((j=3; j <= 8; j+=2 ))
 	do
-		touch "Activities${array_name[$i]}Question${j}.java"
-    		echo "${array_code[$i]} ${array_code[$j]}">"Activities${array_name[$i]}Question${j}.java"
+		touch "ActivitiesFilter${array_name[$i]}Question${j}.java"
+    		echo "${array_code[$i]} ${array_code[$j]}">"ActivitiesFilter${array_name[$i]}Question${j}.java"
 		git add .
-		git commit --date=$j/$i/2017 -m "Activities${array_name[$i]}Question${j}.java"
+		git commit --date=$j/$i/2017 -m "ActivitiesFilter${array_name[$i]}Question${j}.java"
 	done
 done
 git push --all
