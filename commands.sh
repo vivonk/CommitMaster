@@ -712,7 +712,7 @@ array_name[12]="StickArray"
 array_name[13]="Stack"
 
 max=24
-for (( i=3; i <= $max; i*=2 ))
+for (( i=8; i <= $max; i+=3 ))
 do
 	for((j=3; j <= 8; j+=2 ))
 	do
